@@ -10,8 +10,8 @@
         msg: "Hi, I am learning {{ COURSE }}, duration is: {{ DURATION }}, Trainer: {{ Trainer }}"
     - name: print the information agian
       vars:
-      COURSE: "devops with awk"
-      DURATION: "120hrs"
-      Trainer: "venkatgopi"
+       COURSE: "devops with awk"
+       DURATION: "120hrs"
+       Trainer: "venkatgopi"
       ansible.builtin.debug:
         msg: "hi,I am learning {{ COURSE }}, duration is: {{ DURATION}},trainer: {{ Trainer }}"
