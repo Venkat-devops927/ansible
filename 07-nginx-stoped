@@ -6,3 +6,4 @@
     ansible.builtin.package:  #heterogenous model
       name: nginx
       state: absent
+      
