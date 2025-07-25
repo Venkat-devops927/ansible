@@ -1,0 +1,19 @@
+- name: venkatgopi
+  email: venkatgopi@gmail.com
+  addresses: #list of adresses
+    - type: perm
+      addressline1: rajendranagr
+      addressline2: guntakal
+    - type: current
+      addressline1: vivekanagar
+      addressline2: guntur
+
+- name: venkatgopi
+  email: venkatgopi@gmail.com
+  addresses: #list of adresses
+    - type: perm
+      addressline1: rajendranagr
+      addressline2: guntakal
+    - type: current
+      addressline1: vivekanagar
+      addressline2: guntur
