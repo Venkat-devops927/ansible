@@ -3,22 +3,22 @@
   connection: local
   gather_facts: false
   vars_prompt:
-    - name: number
+    - name: number | int
       prompt: please enter the number
       private: false
 
   tasks: 
     - name: print this if less than 10
       ansible.builtin.debug:
-        msg: "given number {{ number }} is less than 10"
-      when: number | int < 10
+        msg: "given number {{ number | int }} is less than 10"
+      when: number  < 10
 
     - name: print this if greater than  to 10
       ansible.builtin.debug:
-        msg: "given number {{ number }} is greater than  to 10"
-      when: number | int > 10
+        msg: "given number {{ number | int }} is greater than  to 10"
+      when: number  > 10
     
     - name: print this if equal to 10
       ansible.builtin.debug:
-        msg: "given number: {{ number }} is equal to 10"
-      when: number | int == 10
+        msg: "given number: {{ number | int }} is equal to 10"
+      when: number  == 10
