@@ -7,18 +7,24 @@
       prompt: please enter the number
       private: false
 
-  tasks: 
+  tasks:
+    - name: set condition flags
+      ansible.builtin.set_fact:
+        is_less_than_10: "{{ number | int < 10 }}"
+        is_greater_than_10: "{{ number | int > 10 }}"
+        is_equal_to_10: "{{ number | int == 10 }}"
+
     - name: print this if less than 10
       ansible.builtin.debug:
         msg: "given number {{ number }} is less than 10"
-      when: number | int < 10
+      when: is_less_than_10
 
     - name: print this if greater than 10
       ansible.builtin.debug:
         msg: "given number {{ number }} is greater than 10"
-      when: number | int > 10
-    
+      when: is_greater_than_10
+
     - name: print this if equal to 10
       ansible.builtin.debug:
         msg: "given number: {{ number }} is equal to 10"
-      when: number | int == 10
+      when: is_equal_to_10
