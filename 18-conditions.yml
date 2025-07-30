@@ -10,3 +10,4 @@
       ansible.builtin.debug:
        msg: " user info : {{ USER }}"
   connection: local
+  ignore_errors: true
