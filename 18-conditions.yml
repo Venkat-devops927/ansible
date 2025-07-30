@@ -9,3 +9,4 @@
     - name: print the user information  
       ansible.builtin.debug:
        msg: " user info : {{ USER }}"
+  connection: local
